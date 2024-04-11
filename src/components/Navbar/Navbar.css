@@ -1,0 +1,33 @@
+.navbar {
+  background: #100e2c;
+  padding: 20px;
+  color: #f2f0ea;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.navbar a.brand {
+  margin-right: auto;
+  color: #f2f0ea;
+  text-decoration: none;
+}
+
+.navbar a:last-child {
+  color: #f2f0ea;
+  text-decoration: none;
+  margin-left: 40px;
+  padding: 8px;
+  border: 1px solid #f2f0ea;
+  border-radius: 4px;
+}
+.navbar a:last-child:hover {
+  background: #f2f0ea;
+  color: #100e2c;
+}
+/* f9c403 */

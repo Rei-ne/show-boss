@@ -1,0 +1,64 @@
+.show-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+
+@media screen and (max-width: 780px) {
+  .show-list {
+    grid-template-columns: auto;
+  }
+}
+
+
+.show-list .card {
+  background: #f2f0ea;
+  color: #100e2c;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+}
+.show-list .card:hover {
+  transform: rotate(3deg);
+}
+
+.show-list .card h3 {
+  color: #f9c403;
+  margin-bottom: 6px;
+}
+.show-list .artists ul {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 8px;
+}
+.show-list .artists li {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #f9c403;
+  color: #100e2c;
+  background: #f2f0ea;
+  font-weight: 700;
+  border-radius: 50px;
+}
+.show-list .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.show-list .card a {
+  text-decoration: underline;
+  font-size: 16px;
+  display: block;
+  width: 100px;
+  text-align: center;
+  color: #100e2c;
+}

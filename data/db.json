@@ -1,0 +1,31 @@
+{
+  "shows": [
+    {
+      "id": "1",
+      "title": "Afrobeats LA Concert",
+      "location": "Los Angeles Convention Center",
+      "date": "2024-05-15",
+      "time": "19:00",
+      "artists": ["Burna Boy", "Wizkid", "Davido", "Tiwa Savage", "Mr Eazi"],
+      "description": "Join us for an electrifying night of Afrobeats music at the Los Angeles Convention Center! Experience the vibrant rhythms and melodies of Africa with performances by some of the biggest names in Afrobeats music, including Burna Boy, Wizkid, Davido, Tiwa Savage, and Mr Eazi. This promises to be a memorable event filled with energetic performances, dancing, and celebration of African culture. Don't miss out!"
+    },
+    {
+      "id": "2",
+      "title": "AfroFest LA",
+      "location": "Hollywood Bowl",
+      "date": "2024-07-20",
+      "time": "18:30",
+      "artists": ["Yemi Alade", "Tekno", "Olamide", "Niniola", "Patoranking"],
+      "description": "Get ready for an unforgettable night of AfroFest at the iconic Hollywood Bowl! Join us as we celebrate the richness of African music and culture with performances by Yemi Alade, Tekno, Olamide, Niniola, and Patoranking. With its stunning outdoor setting and top-notch lineup, AfroFest LA promises to be a feast for the senses!"
+    },
+    {
+      "id": "3",
+      "title": "Afrobeat Nights",
+      "location": "The Novo DTLA",
+      "date": "2024-09-05",
+      "time": "20:00",
+      "artists": ["Rema", "Joeboy", "Fireboy DML", "Teni", "Zlatan"],
+      "description": "Experience the magic of Afrobeat Nights at The Novo DTLA! Join us for a night of non-stop dancing and grooving to the hottest Afrobeats tunes by Rema, Joeboy, Fireboy DML, Teni, and Zlatan. With its lively atmosphere and talented lineup, Afrobeat Nights promises to keep you on your feet all night long!"
+    }
+  ]
+}

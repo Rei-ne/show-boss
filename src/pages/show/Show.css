@@ -1,0 +1,33 @@
+.show {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.artists ul {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 8px;
+}
+
+.artists li {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #f9c403;
+  color: #100e2c;
+  margin-right: 10px;
+  background: #f2f0ea;
+  font-weight: 700;
+  border-radius: 50px;
+}
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
