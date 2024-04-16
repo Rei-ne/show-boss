@@ -9,7 +9,13 @@
 
 @media screen and (max-width: 780px) {
   .show-list {
-    grid-template-columns: auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .card{
+    width: 80%;
   }
 }
 

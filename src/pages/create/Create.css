@@ -2,6 +2,11 @@
 max-width: 480px;
 margin: 60px auto;
 }
+.create .top{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
 .create span {
     padding: 20px 10px;
 }
@@ -16,6 +21,11 @@ margin: 60px auto;
     border-radius: 4px;
     cursor:pointer;
     margin: 20px auto;
+}
+.create .btn{
+    width: auto;
+    display: flex;
+    background-color: rgb(229, 61, 61);
 }
 .artists{
     display: flex;

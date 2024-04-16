@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useRef } from "react";
+import { useFetch } from "../../hooks/useFetch";
 
 // styles
 import "./Create.css";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Create() {
   const [title, setTitle] = useState("");
@@ -14,6 +17,13 @@ export default function Create() {
   const [artists, setArtists] = useState([]);
   const artistInput = useRef(null);
 
+  const { postData, data, error } = useFetch(
+    "http://localhost:3000/shows",
+    "POST"
+  );
+
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setTitle("");
@@ -22,8 +32,14 @@ export default function Create() {
     setTime("");
     setDescription("");
     setArtists([]);
-
-    console.log(title, location, date, time, description, artists);
+    postData({
+      title,
+      location,
+      date,
+      time,
+      description,
+      artists,
+    });
   };
   // to add new artists
   const handleAdd = (e) => {
@@ -38,9 +54,27 @@ export default function Create() {
     artistInput.current.focus();
   };
 
+  // redirect the user after data response
+
+  useEffect(() => {
+    if (data) {
+      navigate("/");
+    }
+  }, [data]);
+
   return (
     <div className="create">
-      <h2 className="page-title">Add a New Show</h2>
+      <div className="top">
+        <button
+          className="btn"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          Cancel
+        </button>
+        <h2 className="page-title">Add a New Show</h2>
+      </div>
       <form onSubmit={handleSubmit}>
         <label>
           <span>Show Title/ Headline:</span>
@@ -90,7 +124,7 @@ export default function Create() {
               value={newArtist}
               ref={artistInput}
             />
-            <button onClick={handleAdd} className="btn">
+            <button onClick={handleAdd} className="">
               add
             </button>
           </div>
