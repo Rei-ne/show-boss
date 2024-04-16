@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useRef } from "react";
 
+// styles
 import "./Create.css";
 
 export default function Create() {
@@ -8,17 +10,45 @@ export default function Create() {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [description, setDescription] = useState("");
+  const [newArtist, setNewArtist] = useState("");
+  const [artists, setArtists] = useState([]);
+  const artistInput = useRef(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setTitle("");
+    setLocation("");
+    setDate("");
+    setTime("");
+    setDescription("");
+    setArtists([]);
+
+    console.log(title, location, date, time, description, artists);
+  };
+  // to add new artists
+  const handleAdd = (e) => {
+    e.preventDefault();
+    const artistItem = newArtist.trim();
+
+    // checks
+    if (artistItem && !artists.includes(artistItem)) {
+      setArtists((prevArtists) => [...prevArtists, artistItem]);
+    }
+    setNewArtist("");
+    artistInput.current.focus();
+  };
 
   return (
     <div className="create">
       <h2 className="page-title">Add a New Show</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>
           <span>Show Title/ Headline:</span>
           <input
             type="text"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
+            required
           />
         </label>
         <label>
@@ -48,6 +78,30 @@ export default function Create() {
             required
           />
         </label>
+        {/* artists */}
+        <label>
+          <span>Artists:</span>
+          <div className="artists">
+            <input
+              type="text"
+              onChange={(e) => {
+                setNewArtist(e.target.value);
+              }}
+              value={newArtist}
+              ref={artistInput}
+            />
+            <button onClick={handleAdd} className="btn">
+              add
+            </button>
+          </div>
+        </label>
+        <p>
+          Current Artists:{" "}
+          {artists.map((artist) => (
+            <em key={artist}>{artist}, </em>
+          ))}{" "}
+        </p>
+
         <label>
           <span>Description:</span>
           <textarea
@@ -56,6 +110,7 @@ export default function Create() {
             required
           />
         </label>
+        <button>Submit</button>
       </form>
     </div>
   );

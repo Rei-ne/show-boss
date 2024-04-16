@@ -1,0 +1,26 @@
+.create{
+max-width: 480px;
+margin: 60px auto;
+}
+.create span {
+    padding: 20px 10px;
+}
+.create button{
+    display: block;
+    width: 100px;
+    font-size: 1em;
+    color:azure;
+    background-color: teal;
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 4px;
+    cursor:pointer;
+    margin: 20px auto;
+}
+.artists{
+    display: flex;
+    align-items: center;
+}
+.artists button{
+    margin: 0 0 0 10px;
+}
