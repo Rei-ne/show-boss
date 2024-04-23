@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import "./ShowList.css";
 
 export default function ShowList({ shows }) {
+  if (shows.length === 0) {
+    return <div className="error">No shows available...</div>;
+  }
   return (
     <div className="show-list">
       {shows.map((show) => (

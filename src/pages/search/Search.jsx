@@ -5,9 +5,10 @@ import "./Search.css";
 
 // components
 import ShowList from "../../components/ShowList/ShowList";
+import { useEffect } from "react";
 
 export default function Search() {
-  const queryString = useLocation();
+  const queryString = useLocation().search;
 
   const queryParams = new URLSearchParams(queryString);
 
@@ -19,11 +20,16 @@ export default function Search() {
 
   const { error, isPending, data } = useFetch(url);
 
+  useEffect(() => {
+    console.log(data);
+    console.log(url);
+  }, [data, url]);
+
   return (
     <div>
       <h2 className="page-title">Shows including "{query}"</h2>
       {error && <p>{error}</p>}
-      {isPending && <p>Loading...</p>}
+      {isPending && <p className="loading">Loading...</p>}
 
       {data && <ShowList shows={data} />}
     </div>
