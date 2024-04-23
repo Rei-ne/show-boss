@@ -26,7 +26,7 @@ export default function Navbar() {
           <h1>Show Boss</h1>
         </Link>
         <Searchbar />
-        <Link to="/create">
+        <Link to="/create" className="create-link">
           <h1>Create Show</h1>
         </Link>
       </nav>
