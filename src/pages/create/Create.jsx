@@ -125,7 +125,7 @@ export default function Create() {
               ref={artistInput}
             />
             <button onClick={handleAdd} className="">
-              add
+              Add
             </button>
           </div>
         </label>
@@ -144,7 +144,7 @@ export default function Create() {
             required
           />
         </label>
-        <button>Submit</button>
+        <button className="btn2">Submit</button>
       </form>
     </div>
   );
