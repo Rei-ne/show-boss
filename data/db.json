@@ -69,6 +69,21 @@
         "dunsin oyekan",
         "mercy chinwo"
       ]
+    },
+    {
+      "id": "1b7a",
+      "title": "Coachella",
+      "location": "Lagos",
+      "date": "2024-05-02",
+      "time": "01:18",
+      "description": "Get ready for an unforgettable night of coachella, live in Lagos! Join us as we celebrate the richness of African music and culture with performances by Beyonce, Sia , Olamide, Rihanna, and Patoranking. With its stunning outdoor setting and top-notch lineup, Coachella LOS promises to be a feast for the senses!",
+      "artists": [
+        "beyonce",
+        "kanye",
+        "sia",
+        "saint jhn",
+        "Olamide"
+      ]
     }
   ]
 }

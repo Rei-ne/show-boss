@@ -34,3 +34,26 @@ margin: 60px auto;
 .artists button{
     margin: 0 0 0 10px;
 }
+
+@media screen and (max-width:480px) {
+.create{
+margin: 20px auto;
+}
+.create .top{
+margin: 2px;
+
+}
+.top .btn {
+font-size: 16px;
+}
+.top .page-title {
+font-size: 24px;
+}
+.create form{
+padding:0 10px;
+}
+.create span {
+    padding: 10px 10px;
+    font-size: 20px;
+}
+}

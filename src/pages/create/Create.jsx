@@ -46,7 +46,7 @@ export default function Create() {
     e.preventDefault();
     const artistItem = newArtist.trim();
 
-    // checks
+    // checks if the artist already exists
     if (artistItem && !artists.includes(artistItem)) {
       setArtists((prevArtists) => [...prevArtists, artistItem]);
     }
