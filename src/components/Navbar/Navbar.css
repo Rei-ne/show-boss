@@ -22,27 +22,53 @@
 
 
 /* f9c403 */
+
+@media screen and (max-width:480px) {
+.navbar{
+padding: 30px 10px;
+display: flex;
+}
+
+.navbar .mobile{
+  display: flex;
+  gap: 6px;
+}
+
+.navbar a.brand{
+width: fit-content;
+padding: 0;
+margin: 0;
+}
+
+.navbar a.brand h1 {
+width: fit-content;
+padding: 0;
+margin: 0;
+text-align: center;
+}
+}
+
 @media screen and (max-width:780px) {
   .navbar .mobile{
     display: flex;
     align-items: center;
     justify-content: space-between;
-   }
+}
 
-   .navbar .desktop{
+  .navbar .desktop{
     display: none;
-   }
+}
 
-   .navbar a.brand {
+  .navbar a.brand {
     margin-right: 0;
 
   }
- .navbar a.create-link {
+  .navbar a.create-link {
      color: #f2f0ea;
      text-decoration: none;
      border: 1px solid #f2f0ea;
      text-align: center;
-     font-size: 10px;
+     font-size: 12px;
      padding: 10px;
      border-radius: 50px;
    }
