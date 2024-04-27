@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useTheme } from "../../hooks/useTheme";
+
 import "./Navbar.css";
 
+// components
 import Searchbar from "../Searchbar/Searchbar";
 
 export default function Navbar() {
   // const [showNav, setShowNav] = useState(true)
+  const { color, changeColor } = useTheme();
 
   return (
-    <div className="navbar">
+    <div className="navbar" style={{ background: color }}>
       {/* desktop nav */}
-      <nav className="desktop">
+      <nav className="desktop" onClick={() => changeColor("pink")}>
         <Link to="/" className="brand">
           <h1>Show Boss</h1>
         </Link>

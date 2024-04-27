@@ -9,12 +9,14 @@ import Show from "./pages/show/Show";
 
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import ThemeSelector from "./components/ThemeSelector/ThemeSelector";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar />
+        <ThemeSelector />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
